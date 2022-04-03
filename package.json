@@ -1,0 +1,21 @@
+{
+  "name": "learning_github_workflows",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "git add . && git commit -m \"fixed errors in the .yaml file\" && git branch -M main && git push -u origin main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deep-patra/github_actions_demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deep-patra/github_actions_demo/issues"
+  },
+  "homepage": "https://github.com/Deep-patra/github_actions_demo#readme"
+}
