@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Echo some message
-       run: echo "This step will be skipped on monday and wednesday"
+       run: echo "workflow you are working ${{ github.workflow }}"

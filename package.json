@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "push": "git add . && git commit -m \"fixed errors in the .yaml file\" && git branch -M main && git push -u origin main"
+    "push": "git add . && git commit -m \"making changes in the .yaml file\" && git branch -M main && git push -u origin main"
   },
   "repository": {
     "type": "git",
