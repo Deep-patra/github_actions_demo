@@ -27,5 +27,5 @@ jobs:
     steps:
       - name: Print the input name to STDOUT
         run: |
-          echo  ${{ inputs.username }}
+          echo  ${{ github.event.workflow_call.inputs.username }}
     
