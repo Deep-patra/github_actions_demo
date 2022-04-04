@@ -1,16 +1,18 @@
 on:
+  label:
+    types:
+      - created
   push:
     branches:
       - main
 jobs: 
-  Explore-Github-Actions:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print a greeting
-        env:
-          MY_VAR: Hi! there! My name is
-          FIRST_NAME: Mona
-          MIDDLE_NAME: The
-          LAST_NAME: Octocat
-        run: |
-          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+      - name: build
+        run: echo "building"
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: publish
+        run: echo "publishing"
