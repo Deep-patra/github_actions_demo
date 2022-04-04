@@ -5,14 +5,18 @@ on:
   push:
     branches:
       - main
+  workflow_call:
+    inputs:
+      username:
+        description: 'A username passed from the caller workflow'
+        default: 'john-doe'
+        required: false
+        type: string
 jobs: 
-  build:
+  print-username:
     runs-on: ubuntu-latest
+
     steps:
-      - name: build
-        run: echo "building"
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - name: publish
-        run: echo "publishing"
+      - name: Print the input name to STDOUT
+        run: echo The username is ${{ inputs.username }}
+    
