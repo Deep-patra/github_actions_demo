@@ -2,6 +2,7 @@ on:
   label:
     types:
       - created
+
   push:
     branches:
       - main
@@ -26,5 +27,5 @@ jobs:
     steps:
       - name: Print the input name to STDOUT
         run: |
-          echo  ${{ github.workflow }}
+          echo  ${{ inputs.username }}
     
