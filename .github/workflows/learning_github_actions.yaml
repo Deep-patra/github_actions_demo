@@ -32,14 +32,15 @@ jobs:
 
     steps:
       - name: Print the input name to STDOUT
-        run: |
-          echo  ${{ inputs.username }}
+        run: echo "${{ inputs.username }}"
       
   print-lastname:
     runs-on: ubuntu-latest
 
     steps:
       - name: Print the last name to STDOUT
-        run: |
-          echo ${{ inputs.lastname }}
+        run: echo '::set-output name=SELECTED_COLOR::green'
+        id: random-color-generator
+      - name: Get color
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
     
