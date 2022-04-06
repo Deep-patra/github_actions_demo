@@ -51,6 +51,16 @@ jobs:
       - name: Print the debug message
         run: echo "::debug::Set the Octat variable"
 
+
+  check_secrets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print secrets
+        env:
+          PORT: ${{ secrets.PORT }}
+        run: echo "${{ PORT }}"
+
   setupNode:
     runs-on: ubuntu-latest
     steps:
