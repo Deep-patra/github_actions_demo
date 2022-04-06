@@ -58,12 +58,13 @@ jobs:
     steps:
       - name: print secrets
         env:
-          PORT: ${{ secrets.PORT }}
+          PORT: $secrets.PORT
 
         run: echo $PORT
 
   setupNode:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node
