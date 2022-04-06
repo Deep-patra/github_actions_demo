@@ -59,7 +59,7 @@ jobs:
       - name: print secrets
         env:
           PORT: ${{ secrets.PORT }}
-        if: ${{ env.PORT === 5000 }}
+        if: ${{ env.PORT == 5000 }}
         run: echo "PORT is 5000"
 
   setupNode:
