@@ -15,6 +15,12 @@ on:
         required: false
         type: string
 
+      lastname:
+        description: 'A last name of the user from the caller workflow'
+        default: 'doe'
+        rewuired: false
+        type: string
+
   workflow_run:
     workflows: ["Build"]
     types: [requested]
@@ -27,5 +33,13 @@ jobs:
     steps:
       - name: Print the input name to STDOUT
         run: |
-          echo  ${{ github.event.workflow_call.inputs.username }}
+          echo  ${{ inputs.username }}
+      
+  print-lastname:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the last name to STDOUT
+        run: |
+          echo ${{ inputs.lastname }}
     
