@@ -18,7 +18,7 @@ on:
       lastname:
         description: 'A last name of the user from the caller workflow'
         default: 'doe'
-        rewuired: false
+        required: false
         type: string
 
   workflow_run:
