@@ -1,12 +1,4 @@
-const express = require('express');
-
-const app = express();
-
-
-app.use('/hello', (req, res) => {
-  res.status(200).json({ message: "hello" });
-});
-
+const app = require('./app');
 
 const server = app.listen(process.env.PORT || 5000, (err) => {
   if (err) {

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Success\"",
+    "test": "jest",
     "push": "git add . && git commit -m \"making changes in the .yaml file\" && git branch -M main && git push -u origin main"
   },
   "repository": {
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Deep-patra/github_actions_demo#readme",
   "devDependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
   }
 }
