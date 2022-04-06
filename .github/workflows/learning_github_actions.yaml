@@ -58,7 +58,7 @@ jobs:
     steps:
       - name: print secrets
         env:
-          PORT: $secrets.PORT
+          PORT: "${{ secrets.PORT }}"
 
         run: echo $PORT
 
