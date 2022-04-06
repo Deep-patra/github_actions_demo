@@ -9,6 +9,6 @@ describe("Testing the Node app", () => {
       .send();
 
     expect(response.status).toEqual(200);
-    expect(response.body).toStrictEqual({ message: "yo" });
+    expect(response.body).toStrictEqual({ message: "hello" });
   });
 });
