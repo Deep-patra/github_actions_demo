@@ -61,6 +61,12 @@ jobs:
           PORT: ${{ secrets.PORT }}
         if: ${{ env.PORT == 5000 }}
         run: echo "PORT is 5000"
+        
+      - name: if port is 4000
+        env:
+          PORT: ${{ secrets.PORT }}
+        if: ${{ env.PORT == 4000 }}
+        run: echo "PORT is 4000"
 
   setupNode:
     runs-on: ubuntu-latest
